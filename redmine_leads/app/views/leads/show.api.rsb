@@ -65,7 +65,7 @@ api.contact do
           api.updated_on note.updated_on
         end
       end
-    end if include_in_api_response?('notes') && @contact.notes.present? && User.current.allowed_to?(:view_contacts, @project)
+    end if include_in_api_response?('notes') && @contact.notes.present? && User.current.allowed_to?(:view_leads, @project)
   end
 
   api.array :contacts do
